@@ -345,6 +345,8 @@ exit:
 
 int cuda_gdrcopy_dev_unregister(uint64_t handle)
 {
+	if(0==handle) return 0;
+
 	int err;
 	struct gdrcopy_handle *gdrcopy;
 
